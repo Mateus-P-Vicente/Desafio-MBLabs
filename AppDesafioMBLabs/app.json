@@ -1,0 +1,12 @@
+{
+  "name": "AppDesafioMBLabs",
+  "displayName": "AppDesafioMBLabs",
+  "expo": {
+    "name": "AppDesafioMBLabs",
+    "slug": "AppDesafioMBLabs",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
