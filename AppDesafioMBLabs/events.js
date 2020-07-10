@@ -1,0 +1,58 @@
+const events = [
+{
+    name: 'Palestra Sobre Empreendedorismo',
+    description: 'Essa palestra vai falar sobre empreendimentos e como se dar bem em meio a pandemia. Saiba a hora certa de empreender!',
+    price: 25.0,
+    date: '2020-07-20T00:00:00.000',
+    location: 'Cambuí',
+    category: 'Palestra',
+    remainingTickets: 50,
+},
+{
+    name: 'Palestra Sobre Desenvolvimento Mobile',
+    description: 'Essa palestra vai falar sobre desenvolvimento mobile e tudo para você aprender a programar. Esperamos você!',
+    price: 20.0,
+    date: '2020-07-30T00:00:00.000',
+    location: 'Cambuí',
+    category: 'Palestra',
+    remainingTickets: 17,
+},
+{
+    name: 'Show da Ivete Sangalo',
+    description: 'Esse será o show mais lembrado da Veveta, com muita animação, empolgação e música. Aproveite já!',
+    price: 70.0,
+    date: '2020-08-02T00:00:00.000',
+    location: 'Allianz Parque',
+    category: 'Show',
+    remainingTickets: 124,
+},
+{
+    name: 'Palestra do Chef Suzuki',
+    description: 'Essa palestra do renomado chef japonês Suzuki te ensinará a cozinhar exatamente igual os japoneses. O evento é gratuito, mas os ingressos são limitados!',
+    price: 0.0,
+    date: '2020-15-20T00:00:00.000',
+    location: 'Taquaral',
+    category: 'Palestra',
+    remainingTickets: 12,
+},
+{
+    name: 'Evento de Integração da Comunidade Árabe',
+    description: 'Esse evento foi organizado para exercitar a cultura árabe e reforçar a existência da nossa comunidade. Venha conhecer e experimentar sabores e tradições do Oriente Médio!',
+    price: 10.0,
+    date: '2020-07-22T00:00:00.000',
+    location: 'Centro de Convivência',
+    category: 'Evento a céu aberto',
+    remainingTickets: 66,
+},
+{
+    name: 'Feira Tec é Top',
+    description: 'Venha conhecer diversos projetos interessantes que buscam renovar nossas tecnologias usuais e apresentar soluções inovadoras para problemas complicados. Venha participar!',
+    price: 30.0,
+    date: '2020-08-02T00:00:00.000',
+    location: 'Allianz Parque',
+    category: 'Feira Tecnológica',
+    remainingTickets: 50,
+},
+];
+
+export default events;
