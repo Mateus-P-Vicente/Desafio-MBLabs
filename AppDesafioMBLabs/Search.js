@@ -24,7 +24,7 @@ function Search({ navigation }) {
                 />
 
                 <TouchableOpacity style={styles.btnIcon} onPress={searchedEvents => setEvents(events.filter(event => event.name.toUpperCase().includes(text.toUpperCase())))} >
-                    <Icon name="search"  size={30} color="#00A2E8" />
+                    <Icon name="search"  size={35} color="#00A2E8" />
                 </TouchableOpacity>
 
             </View>

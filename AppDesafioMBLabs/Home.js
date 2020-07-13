@@ -12,102 +12,116 @@ function Home({ navigation }) {
 
         <ScrollView>
 
-        <Image source={require("./images/app_logo.png")} style={styles.logo}/>
+            <Image source={require("./images/app_logo.png")} style={styles.logo}/>
 
-        <Text style={styles.title}>Meu(s) próximo(s) evento(s)</Text>
-        <FlatList
-            horizontal
-            data={events}
-            renderItem={({item: rowData}) => {
-            return(
-                <TouchableOpacity onPress={() => navigation.navigate('Event', {
-                    name: rowData.name,
-                    description: rowData.description,
-                    price: rowData.price,
-                    date: rowData.date,
-                    location: rowData.location,
-                    category: rowData.category,
-                    remainingTickets: rowData.remainingTickets,
-                  }
-                  )} >
-                <Card
-                title={rowData.name + " (" + rowData.date.substr(8,2) + "/" + rowData.date.substr(5,2) + ")"}
-                key={rowData.i}
-                containerStyle={{ padding: 10, width: 200, borderRadius: 10 }} >
-                <Text style={{marginBottom: 10}}>
-                    {rowData.description}
-                </Text>
-                </Card>
-                </TouchableOpacity>
-            );
-            }}
-            keyExtractor={(item) => item.id} />
+            <View style={styles.containerList}>
 
-        <Text style={styles.title}>Eventos lançados recentemente</Text>
-        <FlatList
-            horizontal
-            data={events}
-            renderItem={({item: rowData}) => {
-            return(
-                <TouchableOpacity onPress={() => navigation.navigate('Event', {
-                    name: rowData.name,
-                    description: rowData.description,
-                    price: rowData.price,
-                    date: rowData.date,
-                    location: rowData.location,
-                    category: rowData.category,
-                    remainingTickets: rowData.remainingTickets,
-                  }
-                  )} >
-                <Card
-                title={rowData.name + " (" + rowData.date.substr(8,2) + "/" + rowData.date.substr(5,2) + ")"}
-                key={rowData.i}
-                containerStyle={{ padding: 10, width: 200, borderRadius: 10 }} >
-                <Text style={{marginBottom: 10}}>
-                    {rowData.description}
-                </Text>
-                </Card>
-                </TouchableOpacity>
-            );
-            }}
-            keyExtractor={(item) => item.id} />
+                <Text style={styles.title}>Meu(s) próximo(s) evento(s)</Text>
+                <FlatList
+                    horizontal
+                    data={events}
+                    renderItem={({item: rowData}) => {
+                    return(
+                        <TouchableOpacity onPress={() => navigation.navigate('Event', {
+                            name: rowData.name,
+                            description: rowData.description,
+                            price: rowData.price,
+                            date: rowData.date,
+                            location: rowData.location,
+                            category: rowData.category,
+                            remainingTickets: rowData.remainingTickets,
+                        }
+                        )} >
+                        <Card
+                        title={rowData.name + " (" + rowData.date.substr(8,2) + "/" + rowData.date.substr(5,2) + ")"}
+                        key={rowData.i}
+                        containerStyle={{ padding: 10, width: 200, borderRadius: 10 }} >
+                        <Text style={{marginBottom: 10}}>
+                            {rowData.description}
+                        </Text>
+                        </Card>
+                        </TouchableOpacity>
+                    );
+                    }}
+                    keyExtractor={(item) => item.id} />
 
-        <Text style={styles.title}>Eventos que você pode gostar</Text>
-        <FlatList
-            horizontal
-            data={events}
-            renderItem={({item: rowData}) => {
-            return(
-                <TouchableOpacity onPress={() => navigation.navigate('Event', {
-                    name: rowData.name,
-                    description: rowData.description,
-                    price: rowData.price,
-                    date: rowData.date,
-                    location: rowData.location,
-                    category: rowData.category,
-                    remainingTickets: rowData.remainingTickets,
-                  }
-                  )} >
-                <Card
-                title={rowData.name + " (" + rowData.date.substr(8,2) + "/" + rowData.date.substr(5,2) + ")"}
-                key={rowData.i}
-                containerStyle={{ padding: 10, width: 200, borderRadius: 10 }} >
-                <Text style={{marginBottom: 10}}>
-                    {rowData.description}
-                </Text>
-                </Card>
-                </TouchableOpacity>
-            );
-            }}
-            keyExtractor={(item) => item.id} />
+            </View>
 
 
-        <Text style={styles.warn}>* Os eventos listados nesse app são meramente ilustrativos. Nenhum preço, localização, palestrante ou data corresponde à realidade.</Text>
+            <View style={styles.containerList}>
+
+                <Text style={styles.title}>Eventos lançados recentemente</Text>
+                <FlatList
+                    horizontal
+                    data={events}
+                    renderItem={({item: rowData}) => {
+                    return(
+                        <TouchableOpacity onPress={() => navigation.navigate('Event', {
+                            name: rowData.name,
+                            description: rowData.description,
+                            price: rowData.price,
+                            date: rowData.date,
+                            location: rowData.location,
+                            category: rowData.category,
+                            remainingTickets: rowData.remainingTickets,
+                        }
+                        )} >
+                        <Card
+                        title={rowData.name + " (" + rowData.date.substr(8,2) + "/" + rowData.date.substr(5,2) + ")"}
+                        key={rowData.i}
+                        containerStyle={{ padding: 10, width: 200, borderRadius: 10 }} >
+                        <Text style={{marginBottom: 10}}>
+                            {rowData.description}
+                        </Text>
+                        </Card>
+                        </TouchableOpacity>
+                    );
+                    }}
+                    keyExtractor={(item) => item.id} />
+
+            </View>
+
+
+            <View style={styles.containerList}>
+
+                <Text style={styles.title}>Eventos que você pode gostar</Text>
+                <FlatList
+                    horizontal
+                    data={events}
+                    renderItem={({item: rowData}) => {
+                    return(
+                        <TouchableOpacity onPress={() => navigation.navigate('Event', {
+                            name: rowData.name,
+                            description: rowData.description,
+                            price: rowData.price,
+                            date: rowData.date,
+                            location: rowData.location,
+                            category: rowData.category,
+                            remainingTickets: rowData.remainingTickets,
+                        }
+                        )} >
+                        <Card
+                        title={rowData.name + " (" + rowData.date.substr(8,2) + "/" + rowData.date.substr(5,2) + ")"}
+                        key={rowData.i}
+                        containerStyle={{ padding: 10, width: 200, borderRadius: 10 }} >
+                        <Text style={{marginBottom: 10}}>
+                            {rowData.description}
+                        </Text>
+                        </Card>
+                        </TouchableOpacity>
+                    );
+                    }}
+                    keyExtractor={(item) => item.id} />
+
+            </View>
+
+
+            <Text style={styles.warn}>* Os eventos listados nesse app são meramente ilustrativos. Nenhum preço, localização, palestrante ou data corresponde à realidade.</Text>
 
         </ScrollView>
 
         <TouchableOpacity style={styles.floatActionButton} onPress={() => navigation.navigate('Search')}>
-        <Icon name="search"  size={30} color="#FFFFFF" />
+            <Icon name="search" size={35} color="#FFFFFF" />
         </TouchableOpacity>
 
         </View>
@@ -128,6 +142,14 @@ const styles = StyleSheet.create({
         fontSize: 22,
     },
 
+    containerList: {
+        padding: 10,
+        width: '94%',
+        borderRadius: 10,
+        backgroundColor: '#FFF',
+        margin: 10,
+    },
+
     warn: {
         fontWeight: 'bold',
         fontSize: 10,
@@ -139,15 +161,13 @@ const styles = StyleSheet.create({
     },
 
     floatActionButton: {
-        borderWidth: 1,
-        borderColor:'rgba(0,0,0,0.2)',
         alignItems:'center',
         justifyContent:'center',
-        width: 60,
+        width: 65,
         position: 'absolute',                                          
         bottom: 10,                                                    
         right: 10,
-        height: 60,
+        height: 65,
         backgroundColor: '#00A2E8',
         borderRadius: 100,
     }
